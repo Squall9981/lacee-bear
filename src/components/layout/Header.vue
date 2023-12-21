@@ -31,6 +31,6 @@
 <style scoped>
 	.header {
 		display: grid;
-		grid-template-columns: auto 1fr;
+		grid-template-columns: 25px 1fr;
 	}
 </style>
