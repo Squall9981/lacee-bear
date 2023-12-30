@@ -53,6 +53,8 @@
 	.menuContainer {
 		display: grid;
 		height: 100%;
+		background: #f9dac6;
+		color: #000000;
 	}
 
 	.menuDiv {
@@ -77,9 +79,13 @@
 		overflow: hidden;
 		li {
 			padding: 10px;
-			background: white;
-			border-bottom: solid thin #eee;
+			background: #f8b6c4;
+			border-bottom: solid thin #b2ddd8;
 			border-left: solid medium #cbc;
+			a {
+				text-decoration: none;
+				color: #000000;
+			}
 		}
 	}
 

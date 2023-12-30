@@ -46,9 +46,16 @@
 	.card {
 		display: grid;
 		grid-template-rows: auto 1fr; /* Two rows: auto for image height, 1fr for remaining space */
-		border: 1px solid #ccc;
+		border: 1px solid #b2ddd8;
 		border-radius: 8px;
 		overflow: hidden;
+		cursor: default;
+		background: #f4b6c2;
+	}
+
+	.card:hover {
+		cursor: pointer;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}
 
 	.image-section {
