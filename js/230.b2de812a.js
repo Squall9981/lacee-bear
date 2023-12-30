@@ -1,0 +1,1 @@
+(self["webpackChunklacee_bear"]=self["webpackChunklacee_bear"]||[]).push([[230],{5230:function(){}}]);
