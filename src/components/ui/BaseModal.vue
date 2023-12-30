@@ -8,6 +8,9 @@
 			<div class="body">
 				<slot name="default"></slot>
 			</div>
+			<div>
+				<slot name="footer"></slot>
+			</div>
 		</dialog>
 	</transition>
 </template>
@@ -37,8 +40,9 @@
 
 	dialog {
 		position: fixed;
-		top: 30vh;
+		top: 10vh;
 		width: 50rem;
+		height: 40rem;
 		left: calc(50% - 20rem);
 		margin: 0;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);

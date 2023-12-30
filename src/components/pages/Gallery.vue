@@ -1,8 +1,13 @@
 <template>
 	<div class="gallery">
-		<GalleryImage v-for="(image, index) in images" :key="index" :imagePath="image" @open-modal="openModal" />
+		<GalleryImage v-for="(image, index) in images" :key="index" :image="image" @open-modal="openModal" />
 		<base-modal v-if="isModalOpen" :open="isModalOpen" @close-modal="closeModal" title="Test Title">
-			<img :src="modalImageSrc" alt="modal image" />
+			<img :src="modalImageSrc" style="width: 100%; height: 100%; object-fit: contain" alt="modal image" />
+			<template v-slot:footer>
+				<div>
+					<p>{{ selectedImage.longDesc }}</p>
+				</div>
+			</template>
 		</base-modal>
 	</div>
 </template>
@@ -11,6 +16,7 @@
 	import GalleryImage from '@/components/layout/GalleryImage.vue';
 	import BaseModal from '@/components/ui/BaseModal.vue'; // Create Modal component separately
 	// import axios from 'axios';
+	import { laceePictures } from '@/assets/images/index.js';
 
 	export default {
 		components: {
@@ -19,16 +25,18 @@
 		},
 		data() {
 			return {
-				images: ['1.jpg', '2.jpg', '3.jpg'],
+				images: laceePictures,
 				isModalOpen: false,
 				modalImageSrc: '',
+				selectedImage: null,
 			};
 		},
 		methods: {
-			openModal(imageSrc) {
-				console.log(imageSrc);
+			openModal(imageObject) {
+				// console.log(imageSrc);
 				this.isModalOpen = true;
-				this.modalImageSrc = imageSrc;
+				this.modalImageSrc = imageObject.imageSrc;
+				this.selectedImage = this.images.find((image) => image.id === imageObject.imageId);
 			},
 			closeModal() {
 				this.isModalOpen = false;
@@ -43,7 +51,9 @@
 	/* CSS styles for gallery */
 	.gallery {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(200px, 1fr));
-		gap: 1rem;
+		grid-template-columns: repeat(auto-fill, 300px);
+		grid-template-rows: 300px;
+		grid-auto-flow: dense;
+		gap: 10px;
 	}
 </style>
