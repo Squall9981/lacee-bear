@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunklacee_bear"]=self["webpackChunklacee_bear"]||[]).push([[96],{2096:function(e,a,c){e.exports=c.p+"img/20230115_210736.889e0d65.jpg"}}]);

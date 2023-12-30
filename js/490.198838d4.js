@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunklacee_bear"]=self["webpackChunklacee_bear"]||[]).push([[490],{3490:function(e,c,a){e.exports=a.p+"media/20211225_120425.d760c73c.mp4"}}]);
