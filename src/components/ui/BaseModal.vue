@@ -42,7 +42,7 @@
 		border: none;
 		border-radius: 12px;
 		padding: 1rem;
-		background-color: white;
+		background-color: #f4b6c2;
 		width: 50%;
 		height: 80%;
 		position: fixed;

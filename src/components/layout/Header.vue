@@ -7,9 +7,9 @@
 			<div class="box">
 				<nav class="menu">
 					<ul class="list">
-						<li v-for="item in menuItems" :key="item.id">
-							<router-link :to="item.to">{{ item.label }}</router-link>
-						</li>
+						<router-link v-for="item in menuItems" :key="item.id" :to="item.to">
+							<li>{{ item.label }}</li>
+						</router-link>
 					</ul>
 				</nav>
 			</div>
@@ -81,12 +81,12 @@
 		list-style-type: none;
 		transform-origin: top;
 		overflow: hidden;
+		a {
+			text-decoration: none;
+			color: #000000;
+		}
 		li {
 			padding: 10px;
-			a {
-				text-decoration: none;
-				color: #000000;
-			}
 		}
 		li:hover {
 			background: rgb(172, 172, 172);

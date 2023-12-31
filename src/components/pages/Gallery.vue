@@ -43,7 +43,9 @@
 				this.modalImageSrc = '';
 			},
 		},
-		created() {},
+		created() {
+			this.images = laceePictures.sort((a, b) => a.id - b.id);
+		},
 	};
 </script>
 
