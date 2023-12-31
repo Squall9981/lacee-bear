@@ -1,8 +1,9 @@
 <template>
 	<div class="header">
 		<div class="row">
-			<div class="box">Lacee Remembered</div>
+			<div class="box"><span class="title">Lacee Remembered</span></div>
 		</div>
+		<hr />
 		<div class="row">
 			<div class="box">
 				<nav class="menu">
@@ -14,6 +15,7 @@
 				</nav>
 			</div>
 		</div>
+		<hr />
 	</div>
 </template>
 
@@ -50,7 +52,6 @@
 		justify-content: center; /* Center horizontally */
 		align-items: center; /* Center vertically */
 		/* Additional box styles */
-		padding: 10px;
 		margin: 5px;
 	}
 
@@ -91,5 +92,18 @@
 		li:hover {
 			background: rgb(172, 172, 172);
 		}
+	}
+
+	.title {
+		font-size: 2rem;
+		font-weight: bold;
+		padding: 20px;
+	}
+
+	hr {
+		margin: 0;
+		border-top: 1px solid #000000;
+		width: 100%;
+		margin: auto;
 	}
 </style>

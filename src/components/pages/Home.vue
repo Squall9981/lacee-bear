@@ -1,20 +1,37 @@
 <template>
 	<div class="container">
-		<h1>Home</h1>
-		<p>Home page content goes here.</p>
-		<div>
+		<div class="grid-item">
 			<img src="../../assets/images/20220629_122714.jpg" alt="" />
 		</div>
-		<div>2011-02-14 ~ 2023-12-14</div>
+		<div>
+			<p class="life-span">2011-02-14 ~ 2023-12-14</p>
+		</div>
 	</div>
 </template>
 
 <style scoped>
 	.container {
+		display: inline-grid;
+		grid-template-columns: 1fr;
+		gap: 20px;
+		margin: 20px;
+		justify-items: center;
+	}
+
+	.grid-item {
 		display: grid;
+		align-items: center;
+		justify-items: center;
 	}
 
 	img {
 		width: 40%;
+		border-radius: 10px;
+		box-shadow: 3px 3px 8px #252525;
+	}
+
+	.life-span {
+		font-size: 1.5rem;
+		font-weight: bold;
 	}
 </style>
