@@ -1,7 +1,7 @@
 <template>
 	<div class="header">
 		<div class="row">
-			<div class="box">Some Title</div>
+			<div class="box">Lacee Remembered</div>
 		</div>
 		<div class="row">
 			<div class="box">
