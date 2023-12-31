@@ -26,8 +26,27 @@
 
 	img {
 		width: 40%;
+		height: auto;
 		border-radius: 10px;
 		box-shadow: 3px 3px 8px #252525;
+	}
+
+	@media screen and (max-width: 440px) {
+		img {
+			width: 95%;
+		}
+	}
+
+	@media screen and (min-width: 441px) and (max-width: 500px) {
+		img {
+			width: 80%;
+		}
+	}
+
+	@media screen and (min-width: 501px) and (max-width: 650px) {
+		img {
+			width: 60%;
+		}
 	}
 
 	.life-span {
