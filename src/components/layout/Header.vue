@@ -8,7 +8,7 @@
 			<div class="box">
 				<nav class="menu">
 					<ul class="list">
-						<router-link v-for="item in menuItems" :key="item.id" :to="item.to" exact>
+						<router-link v-for="item in menuItems" :key="item.id" :to="item.to" class="custom-link" exact>
 							<li>{{ item.label }}</li>
 						</router-link>
 					</ul>
@@ -89,9 +89,6 @@
 		li {
 			padding: 10px;
 		}
-		li:hover {
-			background: rgb(172, 172, 172);
-		}
 	}
 
 	.title {
@@ -110,5 +107,9 @@
 	.router-link-exact-active {
 		font-weight: bold;
 		background: #d6c1b3;
+	}
+
+	.custom-link:hover {
+		background: rgb(172, 172, 172);
 	}
 </style>
