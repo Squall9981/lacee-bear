@@ -52,7 +52,9 @@
 	.gallery {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, 300px);
-		grid-template-rows: 300px;
+		grid-template-rows: repeat(auto-fill, 300px);
+		grid-auto-flow: dense;
+		grid-auto-rows: 300px;
 		grid-auto-flow: dense;
 		gap: 10px;
 	}

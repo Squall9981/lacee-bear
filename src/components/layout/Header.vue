@@ -1,21 +1,25 @@
 <template>
 	<div class="header">
-		<div>
-			<header class="top-header">
-				<dropdown-menu :menuItems="menuItems" />
-			</header>
+		<div class="row">
+			<div class="box">Some Title</div>
 		</div>
-		<div>Content</div>
+		<div class="row">
+			<div class="box">
+				<nav class="menu">
+					<ul class="list">
+						<li v-for="item in menuItems" :key="item.id">
+							<router-link :to="item.to">{{ item.label }}</router-link>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
-	import DropdownMenu from '@/components/ui/DropdownMenu.vue';
 	export default {
 		name: 'Header',
-		components: {
-			DropdownMenu,
-		},
 		data() {
 			return {
 				menuItems: [
@@ -30,7 +34,62 @@
 
 <style scoped>
 	.header {
-		display: grid;
-		grid-template-columns: 25px 1fr;
+		display: flex;
+		flex-direction: column; /* Arrange rows vertically */
+		/* Add any additional styles for the container */
+	}
+
+	.row {
+		display: flex;
+		/* Add styles for the rows if needed */
+	}
+
+	.box {
+		flex: 1; /* Each box will take equal space within the row */
+		display: flex;
+		justify-content: center; /* Center horizontally */
+		align-items: center; /* Center vertically */
+		/* Additional box styles */
+		padding: 10px;
+		margin: 5px;
+	}
+
+	.menu {
+		display: flex;
+		justify-content: center;
+	}
+
+	.menu ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex; /* Display list items horizontally */
+	}
+
+	.menu li {
+		margin: 0 10px;
+	}
+
+	.menu a {
+		text-decoration: none;
+		/* Other link styles */
+	}
+
+	.list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		transform-origin: top;
+		overflow: hidden;
+		li {
+			padding: 10px;
+			a {
+				text-decoration: none;
+				color: #000000;
+			}
+		}
+		li:hover {
+			background: rgb(172, 172, 172);
+		}
 	}
 </style>
