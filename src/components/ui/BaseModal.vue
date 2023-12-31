@@ -1,7 +1,7 @@
 <template>
 	<div v-if="open" class="backdrop" @click="closeModal"></div>
 	<transition name="modal">
-		<dialog open v-if="open">
+		<div class="dialog" open v-if="open">
 			<div class="header">
 				<div><button class="close-btn" @click="closeModal">x</button></div>
 			</div>
@@ -11,7 +11,7 @@
 			<div>
 				<slot name="footer"></slot>
 			</div>
-		</dialog>
+		</div>
 	</transition>
 </template>
 
@@ -38,23 +38,33 @@
 		background-color: rgba(0, 0, 0, 0.75);
 	}
 
-	dialog {
-		position: fixed;
-		top: 10vh;
-		width: 50rem;
-		height: 40rem;
-		left: calc(50% - 20rem);
-		margin: 0;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+	.dialog {
+		border: none;
 		border-radius: 12px;
 		padding: 1rem;
 		background-color: white;
+		width: 50%;
+		height: 80%;
+		position: fixed;
+		top: 10%;
+		left: 25%;
+		transform: translate(-50%, -50%);
+		margin: 0;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 		z-index: 100;
-		border: none;
 		animation: modal 0.3s ease-out forwards;
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, minmax(0, auto));
+	}
+
+	@media (max-width: 767px) {
+		.dialog {
+			width: 90%;
+			margin: 10% auto;
+			padding: 15%;
+			max-width: 90%;
+		}
 	}
 
 	.modal-enter-active {
