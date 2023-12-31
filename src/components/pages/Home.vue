@@ -26,6 +26,7 @@
 
 	img {
 		width: 40%;
+		height: 80vh;
 		height: auto;
 		border-radius: 10px;
 		box-shadow: 3px 3px 8px #252525;
