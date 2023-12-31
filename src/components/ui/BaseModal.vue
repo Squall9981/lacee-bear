@@ -58,7 +58,7 @@
 		grid-template-rows: repeat(2, minmax(0, auto));
 	}
 
-	@media (max-width: 767px) {
+	@media (max-width: 320px) {
 		.dialog {
 			width: 90%;
 			margin: 10% auto;
